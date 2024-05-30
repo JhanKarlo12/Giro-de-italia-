@@ -7,6 +7,8 @@
 
 {% block maincontent %}
   <div>
+      <a href="{% url "team-update" object.id %}">edit</a>
+      <a href="{% url "team-delete" object.id %}">delete</a> 
      <table border="1px">
       <tr>
           {% for p in object.get_players.all %}
@@ -23,3 +25,5 @@
       </table>
    </div>
 {% endblock maincontent %}
+
+

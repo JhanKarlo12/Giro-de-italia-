@@ -14,7 +14,7 @@ class PlayerListView(ListView):
 
 class PlayerDetailView(DetailView):
     model = Player
-
+#player
 class PlayerUpdate(UpdateView):
     model = Player
     fields = '__all__' 
@@ -26,3 +26,16 @@ class PlayerCreate(CreateView):
 class PlayerDelete(DeleteView):
     model = Player
     success_url = reverse_lazy('player-list')
+
+#team
+class TeamUpdate(UpdateView):
+    model = Team
+    fields = '__all__' 
+
+class TeamCreate(CreateView):
+    model = Team
+    fields = '__all__'
+
+class TeamDelete(DeleteView):
+    model = Team
+    success_url = reverse_lazy('team-list')
